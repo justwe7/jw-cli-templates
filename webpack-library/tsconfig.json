@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "lib": ["ESNext", "DOM"],
+    "noImplicitAny": true,
+    "sourceMap": true,
+    "module": "ESNext",
+    "target": "es5",
+    "jsx": "react",
+    "allowJs": true,
+    "declaration": true,
+    "declarationDir": "./types",
+    "moduleResolution": "node",
+    "baseUrl": "./",
+  },
+  "include": ["src", "types"]
+}

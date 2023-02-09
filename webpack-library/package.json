@@ -1,0 +1,33 @@
+{
+  "name": "webpack-library",
+  "version": "1.0.0",
+  "files": [
+    "dist",
+    "types"
+  ],
+  "main": "./dist/bundle.umd.js",
+  "module": "./dist/bundle.esm.js",
+  "types": "./types/index.d.ts",
+  "exports": {
+    "types": "./types/index.d.ts",
+    "import": "./dist/bundle.esm.js",
+    "require": "./dist/bundle.umd.js"
+  },
+  "scripts": {
+    "build:umd": "cross-env MODULE_TYPE=umd webpack --mode=production --config ./build/webpack.config.js",
+    "build:esm": "cross-env MODULE_TYPE=esm webpack --mode=production --config ./build/webpack.config.js",
+    "build": "npm run build:umd & npm run build:esm"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "author": "justwe7<ilihuaxi@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "ts-loader": "^9.4.2",
+    "typescript": "^4.9.5",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1"
+  }
+}
